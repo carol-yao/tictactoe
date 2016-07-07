@@ -1,26 +1,21 @@
 $( function() {
 
-  // $('.board').on('click', '.tile', function() {
-  //   $(this).toggleClass("taken");
-  //   $(this).text("X")
-  // });
-
   $('.player-x').on('click', function() {
     $('.board').on('click', '.tile', function() {
       $(this).attr("class", "taken");
-      $(this).text("X")
+      $(this).html('<h2 class="letters">X</h2>')
     });
   });
 
   $('.player-o').on('click', function() {
     $('.board').on('click', '.tile', function() {
       $(this).attr("class", "taken");
-      $(this).text("O")
+      $(this).html('<h2 class="letters">O</h2>')
     });
   });
 
   $('.reset').on('click', function() {
-    $('.board div').attr("class", "tile").text("");
+    $('.board div div').attr("class", "tile").html("");
   })
 
 })
